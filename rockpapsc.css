@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #90e0f3;
+  font-family: "Playwrite US Trad", system-ui;
+}
+
+button {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.main__game {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #d17b88;
+  flex-grow: 1;
+  justify-content: space-around;
+  border: 20px double #90e0f3;
+  border-radius: 20px;
+  align-items: center;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+.main__game > h1 {
+  color: black;
+  background-color: white;
+  text-shadow: -3px 4px 3px #7f7ca1;
+  text-align: center;
+  border: 7px groove #b8b3e9;
+  border-radius: 10px;
+  display: block;
+  width: 85.34%;
+  font-size: 1.6rem;
+  margin-top: 1.7%;
+}
+
+.main__input {
+  height: 50.67vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main__input > p {
+  color: white;
+  font-size: 2rem;
+}
+
+input {
+  border: 7px groove #b8b3e9;
+  border-radius: 10px;
+}
+
+p input {
+  font-size: 1.332rem;
+  font-family: inherit;
+}
+
+.input__buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 95.67%;
+  height: 20.23vw;
+  margin-top: 3.21vh;
+}
+
+.special__button {
+  background-color: white;
+  border: 10px double black;
+  width: 25%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 2.43%;
+}
+
+.special__button > p {
+  font-size: 2rem;
+}
+
