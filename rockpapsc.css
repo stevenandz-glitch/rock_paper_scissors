@@ -93,3 +93,108 @@ p input {
   font-size: 2rem;
 }
 
+.select__buttons {
+  width: 78%;
+  display: none;
+  transform-origin: right;
+  animation: slide_display 0.5s ease-in-out forwards;
+}
+
+@keyframes slide_display {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+:is(.input__buttons:hover, .input__buttons:focus-within) .select__buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+:is(.input__buttons:hover, .input__buttons:focus-within) p {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+
+.select__buttons > button {
+  height: 75.23%;
+  width: 35.21%;
+  font-size: 1.2rem;
+  border-radius: 30.32%;
+}
+
+.main__buttons {
+  width: 80.67%;
+  height: 15.43vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.main__buttons > button {
+  height: 50%;
+  width: 75%;
+  font-size: 1.7rem;
+  border-radius: 10px;
+}
+
+@media (orientation: landscape) {
+  .main__game > h1 {
+    margin-top: 0.2%;
+  }
+
+  .main__input {
+    height: 33.67vh;
+  }
+
+  .main__input > p {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .input__buttons {
+    justify-content: space-evenly;
+    align-items: center;
+    height: 12.32vh;
+  }
+
+  .special__button {
+    border: 3px solid black;
+    width: 13.21%;
+    height: 100%;
+  }
+
+  .special__button > p {
+    font-size: 1.7rem;
+  }
+
+  .select__buttons > button {
+    height: 50.23%;
+    width: 25.21%;
+    font-size: 1.2rem;
+    border-radius: 10px;
+  }
+
+  .select__buttons > button:last-child {
+    height: 13.43vh;
+  }
+
+  .main__buttons {
+    justify-content: space-between;
+  }
+
+  .main__buttons > button {
+    height: 58%;
+    width: 15.32%;
+    font-size: 1.2rem;
+    border-radius: 45.21%;
+  }
+}
+
