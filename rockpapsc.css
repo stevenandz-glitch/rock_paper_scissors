@@ -19,6 +19,7 @@ button {
   font-family: inherit;
   border: 7px groove #b8b3e9;
   text-shadow: -3px 4px 3px #7f7ca1;
+  width: fit-content;
 }
 
 .main__game {
@@ -62,8 +63,12 @@ button {
 input {
   border: 7px groove #b8b3e9;
   border-radius: 10px;
+  min-width: 70%;
 }
 
+input:last-child {
+  min-width: 85%;
+}
 p input {
   font-size: 1.332rem;
   font-family: inherit;
@@ -181,10 +186,6 @@ p input {
     width: 25.21%;
     font-size: 1.2rem;
     border-radius: 10px;
-  }
-
-  .select__buttons > button:last-child {
-    height: 13.43vh;
   }
 
   .main__buttons {
