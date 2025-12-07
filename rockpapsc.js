@@ -30,7 +30,7 @@ function TypeWriter(element_id, text, delay_ms = 100) {
 
   function TypeCharacter() {
     if (char_index < text.length) {
-      new Audio("sounds/type_sounds.mp3").play();
+      new Audio("sounds/type_sound.mp3").play();
       target_element.value += text.charAt(char_index++);
       setTimeout(TypeCharacter, delay_ms);
     }
@@ -56,10 +56,11 @@ let score_input = document.querySelector("#score");
 const reset_button = document.querySelector("#reset");
 const enter_button = document.querySelector("#enter");
 
-const select_buttons = document.querySelector(".select_buttons");
+const select_buttons = document.querySelector(".select__buttons");
 
 select_buttons.querySelectorAll("button").forEach((element)=>{
   element.addEventListener("click", ()=>{
+    user_input.value = ' ';
     user_input.value += element.textContent;
   });
 });
@@ -67,6 +68,7 @@ select_buttons.querySelectorAll("button").forEach((element)=>{
 enter_button.addEventListener("click", ()=>{
   rounds++;
   user_input.value = user_input.value.charAt(0).toUpperCase() + user_input.value.slice(1);
+  user_input.value = user_input.value.trim();
 
   if (!ValidMove(user_input.value)) {
     score_input.value = ' ';
@@ -78,7 +80,7 @@ enter_button.addEventListener("click", ()=>{
     if (((user_value === "Paper") && (computer_value === "Rock")) ||
         ((user_value === "Scissors") && (computer_value === "Paper")) || 
         ((user_value === "Rock") && (computer_value === "Scissors"))) {
-      
+
       user_points++;
     } else if (user_value === computer_value) {
 
@@ -93,7 +95,7 @@ enter_button.addEventListener("click", ()=>{
     TypeWriter("computer", computer_value, 75);
 
     if (rounds === 5) {
-      enter_button.disabled = true;
+      enter_button.setAttribute("diabled", true); 
       game_ended = true;
     }
   }
@@ -111,7 +113,7 @@ enter_button.addEventListener("click", ()=>{
 });
 
 reset_button.addEventListener("click", ()=>{
-  enter_button.disbled = false;
+  enter_button.removeAttribute("disabled");
   game_ended = false;
   user_points = 0;
   computer_points = 0;

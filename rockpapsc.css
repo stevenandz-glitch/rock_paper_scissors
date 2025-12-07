@@ -15,9 +15,10 @@ body {
 }
 
 button {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+  text-align: center;
+  font-family: inherit;
+  border: 7px groove #b8b3e9;
+  text-shadow: -3px 4px 3px #7f7ca1;
 }
 
 .main__game {
