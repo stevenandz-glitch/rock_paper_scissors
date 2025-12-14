@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&display=swap');
 
 * {
   margin: 0;
@@ -11,14 +12,13 @@ body {
   display: flex;
   flex-flow: column nowrap;
   background-color: #90e0f3;
-  font-family: "Playwrite US Trad", system-ui;
+  font-family: "BBH Hegarty", system-ui;
 }
 
 button {
   text-align: center;
   font-family: inherit;
   border: 7px groove #b8b3e9;
-  text-shadow: -3px 4px 3px #7f7ca1;
   width: fit-content;
 }
 
@@ -32,12 +32,12 @@ button {
   border-radius: 20px;
   align-items: center;
   padding: 0.2em 0.5em 0.2em 0.5em;
+  position: relative;
 }
 
 .main__game > h1 {
   color: black;
   background-color: white;
-  text-shadow: -3px 4px 3px #7f7ca1;
   text-align: center;
   border: 7px groove #b8b3e9;
   border-radius: 10px;
@@ -106,12 +106,51 @@ p input {
   animation: slide_display 0.5s ease-in-out forwards;
 }
 
+.is__tie {
+  display: none;
+  min-width: 87.32%;
+  min-height: 7.3rem;
+  background-color: red;
+  text-align: center;
+  position: absolute;
+  padding-top: 7%;
+  top: 0;
+  font-size: 1.8em;
+  letter-spacing: 2.1px;
+  border-radius: 10px;
+  transform-origin: top;
+}
+
 @keyframes slide_display {
   0% {
     transform: scaleX(0);
   }
+  50% {
+    transform: scaleX(1.5);
+  }
   100% {
     transform: scaleX(1);
+  }
+}
+
+@keyframes pull_down {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes pull_up {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+  100% {
+    transform: scaleY(0);
   }
 }
 
